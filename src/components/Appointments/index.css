@@ -1,0 +1,125 @@
+.app-container {
+  background-image: linear-gradient(to bottom, #fbc7d4, #9796f0);
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  align-items: center;
+}
+
+.appointments-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 70%;
+  padding: 30px;
+}
+
+.main-heading {
+  color: #171f46;
+  font-size: 20px;
+  font-family: 'Roboto';
+}
+
+.inputs-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.image {
+  height: 40%;
+  width: 40%;
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    display: none;
+  }
+  .main-heading {
+    font-size: 15px;
+  }
+  .sub-heading {
+    font-size: 12px;
+  }
+}
+.title {
+  color: #b5b7c4;
+  font-family: 'Roboto';
+  margin: 0px;
+  font-size: 12px;
+}
+.text-input {
+  outline: none;
+  padding: 5px;
+  font-family: 'Roboto';
+  width: 100%;
+  border-radius: 4px;
+  border-width: 1px;
+}
+
+.date {
+  color: #b5b7c4;
+  font-family: 'Roboto';
+  margin: 0px;
+  margin-top: 15px;
+  font-size: 12px;
+}
+.date-input {
+  outline: none;
+  font-family: 'Roboto';
+  padding: 5px;
+  width: 100%;
+  border-radius: 4px;
+  border-width: 1px;
+}
+
+.add-button {
+  margin-top: 20px;
+  outline: none;
+  border-radius: 6px;
+  border-width: 0px;
+  background-color: #8b5cf6;
+  font-family: 'Roboto';
+  color: #ffffff;
+  padding: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.horizontal-line {
+  border: 1px solid #b5b7c4;
+  margin-top: 10px;
+}
+
+.heading-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-heading {
+  font-family: 'Roboto';
+  font-size: 14px;
+}
+
+.starred-button {
+  border-radius: 16px;
+  outline: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #9897f0;
+  color: #9897f0;
+  font-family: 'Roboto';
+  margin-left: 10px;
+}
