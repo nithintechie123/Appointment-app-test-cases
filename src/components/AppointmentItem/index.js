@@ -1,18 +1,31 @@
-import {format} from 'date-fns'
-
 import './index.css'
 
 const AppointmentItem = props => {
-  const {appointmentDetails} = props
-  const {titleInput, dateInput} = appointmentDetails
+  const {appointmentDetails, isFavoriteStarButton} = props
+  const {id, title, date, isFavorite} = appointmentDetails
 
-  const dateString = format(new Date(dateInput))
-  console.log(dateString)
+  const toggleStarImage = isFavorite
+    ? 'https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png'
+    : 'https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png'
+
+  const onClickFavoriteButton = () => {
+    isFavoriteStarButton(id)
+  }
 
   return (
     <li className="appointment-item">
-      <h1>{titleInput}</h1>
-      <p>{dateString}</p>
+      <div className="user-star-container">
+        <p className="title-heading">{title}</p>
+        <button
+          type="button"
+          data-testid="star"
+          className="star-button"
+          onClick={onClickFavoriteButton}
+        >
+          <img src={toggleStarImage} alt="star" />
+        </button>
+      </div>
+      <p className="full-date">Date:{date}</p>
     </li>
   )
 }
